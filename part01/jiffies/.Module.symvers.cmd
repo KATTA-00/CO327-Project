@@ -1,0 +1,1 @@
+savedcmd_/media/sf_project/part01/jiffies/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /media/sf_project/part01/jiffies/Module.symvers -T /media/sf_project/part01/jiffies/modules.order -i Module.symvers -e 
