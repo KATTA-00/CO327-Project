@@ -74,5 +74,5 @@ module_init(proc_init);
 module_exit(proc_exit);
 
 MODULE_LICENSE("GPL");
-MODULE_DESCRIPTION("Hello Module");
-MODULE_AUTHOR("SGG");
+MODULE_DESCRIPTION("JIFFIES");
+MODULE_AUTHOR("KATTA");

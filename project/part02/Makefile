@@ -1,4 +1,4 @@
-obj-m += task1.o
+obj-m += my_ps_elf.o
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 clean:

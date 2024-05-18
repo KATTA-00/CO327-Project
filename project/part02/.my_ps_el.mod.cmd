@@ -1,0 +1,1 @@
+savedcmd_/media/sf_project/project/part02/my_ps_el.mod := printf '%s\n'   my_ps_el.o | awk '!x[$$0]++ { print("/media/sf_project/project/part02/"$$0) }' > /media/sf_project/project/part02/my_ps_el.mod
