@@ -4,6 +4,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+#define INPUTFILE "fixtures"
+
 /**
  * Executes the command "cat fixtures | grep <search_term> | cut -b 1-9".
  */
@@ -14,9 +16,9 @@ int main(int argc, char **argv)
 	int i;
 
 	// arguments for commands
-	char *cat_args[] = ** insert your code here ** 
-	char *grep_args[] = ** insert your code here **
-	char *cut_args[] = ** insert your code here **
+	char *cat_args[] = {"cat", INPUTFILE, NULL};
+	*char *grep_args[] = {"grep", "-i", argv[1], NULL};
+	*char *cut_args[] = {"cut", "-b", "1-9", NULL};
 
 	// make 2 pipes (cat to grep and grep to cut); each has 2 fds
 
@@ -39,7 +41,7 @@ int main(int argc, char **argv)
 	{
 		// replace cat's stdout with write part of 1st pipe
 		// TODO: ** insert your code here **
-		
+
 		// close all pipes (very important!); end we're using was safely copied
 		// TODO: ** insert your code here **
 
@@ -84,10 +86,9 @@ int main(int argc, char **argv)
 
 	// only the parent gets here and waits for 3 children to finish
 	// It's a good idea to close all your pipes (the parent needs none!)
-	// before waiting for your children! 
+	// before waiting for your children!
 
 	// TODO: ** insert your code here **
 
 	// TODO: ** insert your code here **
 }
-

@@ -1,21 +1,20 @@
-#include <fcntl.h> 
-#include <sys/stat.h> 
-#include <sys/types.h> 
-#include <unistd.h> 
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 
-int main() 
-{ 
-    int fd; 
-    char * fifo = "/tmp/fifo"; 
+int main()
+{
+    int fd;
+    char *fifo = "/tmp/fifo";
 
-    mkfifo(fifo,0666); 
+    mkfifo(fifo, 0666);
 
-    fd = open(fifo, O_WRONLY); 
-    write(fd, "Hi",2); 
-    close(fd); 
+    fd = open(fifo, O_WRONLY);
+    write(fd, "Hi", 2);
+    close(fd);
 
-    unlink(fifo); 
+    unlink(fifo);
 
-    return 0; 
+    return 0;
 }
-
